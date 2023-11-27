@@ -1,0 +1,102 @@
+h1{
+    text-align: center;
+    font: Arial, Helvetica, sans-serif;
+    color: rgb(90, 115, 129); 
+    font-size: 300%;
+    font-style: unset;
+    font-weight: bolder;
+}
+.datagrid table 
+{ 
+    margin-top: initial;
+    border-collapse: collapse; 
+    text-align: center; 
+    width: 100%;
+    box-shadow: rgb(90, 115, 129); 
+} 
+.datagrid
+{
+    font: normal 12px/150% Arial, Helvetica, sans-serif; 
+    background: #fff; 
+    overflow: hidden; 
+    border: 2px solid #006699;
+    -webkit-border-radius: 10px; 
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
+
+.datagrid table td,
+.datagrid table th 
+{ 
+    padding: 10px 20px; 
+}
+.datagrid table thead th 
+{
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );
+    background: -moz-linear-gradient( center top, #006699 5%, #00557F 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
+    background-color:#006699; 
+    color:#FFFFFF; 
+    font-size: 15px; 
+    font-weight: bold;
+    border-left: 0px solid #0070A8; 
+} 
+.datagrid table thead th:first-child 
+{ 
+    border: none; 
+}
+.datagrid table tbody td 
+{ 
+    color: #00496B; 
+    font-size: 14px;
+    font-weight: normal; 
+}
+.datagrid table tbody td:first-child 
+{ 
+    border-left: none; 
+}
+.datagrid table tbody tr:last-child td
+{ 
+    border-bottom: none; 
+}
+.datagrid table tbody tr:nth-child(even)
+{
+    background-color: #dddddd;
+}
+tr:hover td{
+    background-color: #99a8b1;
+    color: white;
+}
+p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 150%;
+    padding: 20px;
+}
+
+a:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+.warning{
+    text-decoration: none;
+    padding: 3px;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #231f2e;
+    background-color: lightcoral;
+    border-radius: 6px;
+    border: 2px solid #131e6d;
+}
+
+.edit{
+    text-decoration: none;
+    padding: 3px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #231f2e;
+    background-color: lightgreen;
+    border-radius: 6px;
+    border: 2px solid #131e6d;
+}

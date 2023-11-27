@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_h.css">
+</head>
+<body>
+
+    <div class="wrapper hover_collapse">
+
+        <div class="top_navbar">
+            <div class="logo">CS<span>Inventory</span></div>
+            <div class="menu">
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="profile_wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
+                            <div class="profile">
+                                <img src="img/user.jfif" alt="profile_pic">
+                                    <span class="name">Usuario</span>
+                                    <span class="icon"></span>
+                                    <i class="fas fa-angle-down"></i> 
+                            </div>
+                            </a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="Actualizar_u.html"><i class="fas fa-sliders-h"></i> Modificar</a></li>
+                                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar_inner">
+                <ul>
+                    <li class="sidebar-item" id="inventario">
+                        <a href="#inventario">
+                            <span class="icon"></span>
+                                <i class="fas fa-cubes"></i>
+                            <span class="text">Inventario</span>
+                        </a>
+                        <div class="sidebar-item_sub">
+                            <a href="Mostrar_i.html">
+                                <span class="icon"></span>
+                                    <i class="fas fa-th-list"></i>
+                                <span class="text">Mostrar</span>
+                            </a>
+                            <a href="Registrar_i.html">
+                                <span class="icon"></span>
+                                    <i class="fas fa-tasks"></i>
+                                <span class="text">Registrar</span>
+                            </a>
+                            <a href="Buscar_i.html">
+                                <span class="icon"></span>
+                                    <i class="fas fa-search"></i>
+                                <span class="text">Buscar</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="sidebar-item" id="usuarios">
+                        <a href="#usuarios">
+                            <span class="icon"></span>
+                                <i class="far fa-address-card"></i>
+                            <span class="text">Usuarios</span>
+                        </a>
+                        <div class="sidebar-item_sub">
+                            <a href="Mostrar_u.html">
+                                <span class="icon"></span>
+                                    <i class="fas fa-th-list"></i>
+                                <span class="text">Mostrar</span>
+                            </a>
+                        </div>
+                        <div class="sidebar-item_sub">
+                            <a href="Registrar_c.html">
+                                <span class="icon"></span>
+                                    <i class="fas fa-th-list"></i>
+                                <span class="text">Registrar</span>
+                            </a>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main_container">
+            <h1>Bienes</h1>
+            <div class="datagrid">
+            <table class = "table" border=1>
+                <thead>
+                    <th scope="row">Fecha</th>
+                    <th scope="row">Id</th>
+                    <th scope="row">Nombre</th>
+                    <th scope="row">Cantidad</th>
+                    <th scope="row">Ubicación</th>
+                    <th scope="row">Descripción</th>
+                    <th scope="row">Creador</th>
+                    <th scope="row">Acciones</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+        
+<script src="js/script_h.js"></script>
+</body>
+</html>

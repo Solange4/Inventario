@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Iniciar Sesion</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos_login.css">
+  <script src="js_conexion/login.js"></script>
+</head>
+<body>
+<div>
+<div class="login">
+  <div class="form">
+    <h1>INICIAR SESION</h1>
+	<h2> o <a href="registrarse.html">Registrate</a></h2>
+	<label for="username">Usuario: </label>
+    <input class="username" name="username" id="username" type="text" placeholder="Ingresar usuario">
+    <br><br>
+    <label for="clave">Contraseña: </label>
+    <input class="password" name="password" id="clave" type="password" placeholder="Ingresa tu contraseña">
+    	<br><br>
+		<input type="button" onclick="ingresar();" value="ENVIAR">
+  </div>
+</div>
+</div>
+
+<script>
+    // http://alvaro.timoideas.com/login
+    function ingresar() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        console.log("Usuarios:", username, " Clave:", password);
+        $.ajax({
+            // En data puedes utilizar un objeto JSON, un array o un query string
+            data: {"username" : username, "password" : password},
+            //Cambiar a type: POST si necesario
+            type: "POST",
+            // Formato de datos que se espera en la respuesta
+            dataType: "json",
+            // URL a la que se enviará la solicitud Ajax
+            url: "http://alvaro.timoideas.com/login",
+        })
+            .done(function( data, textStatus, jqXHR ) {
+                console.log("EJECUTADO");
+                console.log(data);
+                if (data.ok){
+                    alert("bienvenido");
+                    sessionStorage.setItem("idsession", data.sessionID);
+                    location.href ="Home.html";
+                }else{
+                    alert("Rechazado");
+                }
+            })
+            .fail(function( jqXHR, textStatus, errorThrown ) {
+                if ( console && console.log ) {
+                    console.log( "La solicitud a fallado: " +  textStatus);
+                }
+            });
+    }
+</script>
+</body>
+</html>
